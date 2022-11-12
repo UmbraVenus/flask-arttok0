@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+    <main class="main main--home">
+        <section class="artists">
+            {% for artist in artists %}
+                <article class="artist-card">
+                    <div class="artist-card__embed">
+                        {{ artist['embed'] | safe}}
+                    </div>
+
+                    <header class="artist-card__meta">
+                        <a class="shop" href="{{artist['shop']}}">
+                            {{artist['shop']}}
+                        </h3>
+
+                        <h2 class="artist-card__name" ">{{ artist['name'] }}</h2>
+                    </header>
+                </article>
+            {% endfor %}
+        </section>
+    </main>
+{% endblock %}

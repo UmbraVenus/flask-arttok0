@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Libre Baskerville', "serif";
+}
+
+body {
+	margin-top: 80px;
+}
+
+.header {
+	text-align: center;
+}
+
+.nav {
+	margin-bottom: 3rem;
+	font-size: 1.2rem;
+}
+
+.nav__link {
+	text-decoration: none;
+	color: #1c2023;
+	margin: 2.5rem;
+}
+
+.main {
+	margin: 0 auto;
+	align-items: center;
+	line-height: 150%;
+	max-width: 600px;
+}
+
+.artists {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
+	justify-items: center;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+@media (min-width: 48.75em) {
+	.artists {
+		grid-template-columns: repeat(4, 1fr);
+		max-width: 45rem;
+	}
+}
+
+@media (min-width: 70em) {
+	.artists {
+		grid-template-columns: repeat(4, 1fr);
+		max-width: 68rem;
+	}
+}
+
+.artist-card {
+	padding: 0.75rem 0;
+}
+
+.artist-card__image {
+	max-width: 100%;
+	margin-bottom: 1rem;
+	transition: transform 0.2s ease-in-out;
+}
+
+.artist-card__meta {
+	padding: 0 1.25rem;
+}
+
+.artist-card__name {
+	margin: 0;
+	font-size: 1.5rem;
+	line-height: 2.25rem;
+	color: #1c2023;
+}
+
+.artist-card:hover .artist-card__image {
+	transform: translateY(-0.5rem);
+}
+
+.artist-card:hover .artist-card__name {
+	text-decoration: underline;
+}
+
+/* Adds an ::after pseudo-element to each category tag, except the last one.
+   This psuedo-element contains a pipe character (|), which acts as a seperator
+   between the tags. */
+
+/* Utility class to remove link styles */
+.u-bare-link {
+	text-decoration: none;
+}
